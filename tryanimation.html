@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;        
+    }
+.outer{
+    border:2px solid black;
+    margin-top: 200px;
+    margin-left: 200px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+    .outer-border{
+        border:2px solid black;
+        width: 800px;
+       height: 200px;
+       display: flex;
+       
+    }
+    #box1{
+        border:2px solid black;
+        width: 200px;
+        height:200px;
+        background-color: red;
+    }
+    #box2{
+        border:2px solid black;
+        width: 200px;
+        height:200px;
+        background-color: yellow;
+    }
+    #box3{
+        border:2px solid black;
+        width: 200px;
+        height:200px;
+        background-color: green;
+    }
+    #box4{
+        border:2px solid black;
+        width: 200px;
+        height:200px;
+        background-color: rgb(144, 0, 255);
+    }
+    .click-btn{
+        border:2px solid black;
+        width: 50%;
+        height: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -50px;
+        margin-left: 45px;
+        margin-right: 45px;
+        
+    }
+    .click-btn .circle{
+        border:2px solid black;
+        border-radius: 7px;
+        width: 11px;
+        height: 11px;
+    }
+    .input-box{
+        /* display: none; */
+    }
+.circle:hover{
+    background-color: yellow;
+}
+
+</style>
+<body>
+    <div class="outer">
+        <div class="outer-border">
+            <div id="box1" class="first"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+            <div id="box4"></div>
+        </div>
+        <div class="input-box">
+            <input type =radio name = "circle" id="circle1">
+            <input type =radio name = "circle" id="circle2">
+            <input type =radio name = "circle" id="circle3">
+            <input type =radio name = "circle" id="circle4">
+        </div>
+        <div class="click-btn">
+           <label for="circle1">
+             <div class="circle"></div>
+            </label> 
+
+           <label for="circle2"> 
+            <div class="circle"></div>
+        </label> 
+
+           <label for="circle3"> 
+            <div class="circle"></div>
+        </label> 
+
+           <label for="circle4"> 
+            <div class="circle"></div>
+        </label> 
+        </div>
+    </div>
+</body>
+</html>
