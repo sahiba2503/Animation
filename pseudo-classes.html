@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* we have some type of selectors in css .
+        simple selecror, combinator selector, attribute selector and pseudo selector. */
         *{
             margin: 0;
             padding: 0;
@@ -50,11 +52,167 @@
             color:blue;
             
         }
+         p:first-of-type{
+            color:red;
+            
+        }
+        div:empty{
+             border:2px solid red;
+        margin-bottom: 20px;  
+          }
+        
+        #note div:empty{
+            border:2px solid green; 
+            margin-top: 20px;
+        }
+        #noted p:hover{
+            color :red;
+            font-size:larger;
+            font-weight: 900;
+            background-color: white;
+        }
+        p:target{
+            /* it will be heigh light on top of the page. */
+            color:yellow;
+        }
+       #box{
+        border:2px solid black;
+        width: 200px;
+        height: 200px;
+        margin-left: 300px;
+        /* overflow: hidden; */
+            }
+            #outer-border{
+                border:2px solid black;
+                width: 800px;
+                height:200px;
+                display: flex;
+              
+
+            }
+            #a{
+        border:2px solid black;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+            }
+            #aa{
+        border:2px solid black;
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+            }
+            #aaa{
+        border:2px solid black;
+        width: 200px;
+        height: 200px;
+        background-color: hotpink;
+            }
+            #aaaa{
+        border:2px solid black;
+        width: 200px;
+        height: 200px;
+        background-color: green;
+            }
+.small-box{
+    border:2px solid black;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 350px;
+    margin-top: -30px;
+}
+#circle-1{
+    border:2px solid black;
+    border-radius: 11px;
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+}
+
+#circle-2{
+    border:2px solid black;
+    border-radius: 11px;
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+}
+#circle-3{
+    border:2px solid black;
+    border-radius: 11px;
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+}
+#circle-4{
+    border:2px solid black;
+    border-radius: 11px;
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+}
+.small-box #circle-1:hover{
+    background-color: white; 
+ }
+    .small-box #circle-2:hover{
+        background-color: white;
+      }
+        .small-box #circle-3:hover{
+            background-color: white; 
+         }
+            .small-box #circle-4:hover{
+                background-color: white; 
+             }
+
+
     </style>
+    <script>
+        function First(){
+           document.getElemetByID("outer-border").style.mrginLeft = "0px";
+        }
+        function Second(){
+           document.getElemetByID("outer-border").style.mrginLeft = "-200px";
+        }
+        function Third(){
+           document.getElemetByID("outer-border").style.mrginLeft = "-400px";
+        }
+        function fourth(){
+           document.getElemetByID("outer-border").style.color = "-600px";
+           
+        }    
+    </script>
 </head>
 <body>
     <!-- every pseudo-class has : before the name -->
     <h1>CSS Pseudo-classes</h1>
+    <div class="myLink">
+    <a href="#abc">first link</a><br>
+    <a href="#abcd">second link</a><br>
+    <a href="#abcde">third link</a><br>
+    <a href="#abcdef">third link</a><br>
+
+  
+<div id="box">
+    <div id="outer-border">
+    <div id="a" ></div>
+    <div id="aa" ></div>
+    <div id="aaa" ></div>
+    <div id="aaaa" onclick="myEventF()"></div>
+    </div>
+</div>
+<div class="small-box">
+    <div id="circle-1" onclick="First()"></div>
+    <div id="circle-2" onclick="Second()"></div>
+    <div id="circle-3" onclick="Third()"></div>
+    <div id="circle-4" onclick="Fourth()"></div>
+</div>
+<button onclick="addevent()"></button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero recusandae, consectetur eveniet similique ut ab unde modi. Atque et vero, doloremque dicta harum excepturi quibusdam, nesciunt, minus quo enim hic?</p><br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid maiores error facere quam iusto ullam voluptatum perspiciatis quaerat sunt eligendi animi blanditiis enim mollitia dignissimos, eius ducimus vel commodi?</p><br>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima mollitia aut perspiciatis blanditiis cupiditate, officia nisi veritatis. Dolorem doloremque repudiandae cum fuga. Reiciendis culpa at, mollitia facilis similique dicta deleniti!</p><br>
+    </div>
+    <div></div>
     <ul>
         <li>list one</li>
         <li>list two</li>
@@ -62,20 +220,25 @@
         <li>list four</li>
         <li>list five</li>
     </ul>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eius odio voluptates aperiam consequuntur ducimus ab ipsum? Dicta laudantium consectetur nisi voluptatibus, esse quidem cum dolorem ut placeat in temporibus.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem asperiores sed corporis. Consequuntur itaque reiciendis sit non dolore? Suscipit eveniet necessitatibus dolores quas explicabo, est provident excepturi impedit consequuntur voluptate!</p>
-
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias porro eius doloribus quasi ipsum ab veniam natus impedit magnam facere laborum praesentium blanditiis debitis nihil repellendus dignissimos, accusamus et! Exercitationem?</p>
+    <div id="noted">
+    <p>it has hover effect Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eius odio voluptates aperiam consequuntur ducimus ab ipsum? Dicta laudantium consectetur nisi voluptatibus, esse quidem cum dolorem ut placeat in temporibus.</p>
+    <div></div>
+       <p</div>  
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem asperiores sed corporis. Consequuntur itaque reiciendis sit non dolore? Suscipit eveniet necessitatibus dolores quas explicabo, est provident excepturi impedit consequuntur voluptate!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus.</p>
+    </div>
     <ul>
         <li>list1</li>
         <li>list2</li>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore vero dolores omnis velit voluptatibus ex culpa incidunt excepturi. Vero dignissimos dolores voluptatem doloremque est similique earum expedita dolorem labore.</p>
-
     </ul>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, expedita doloribus! Ad ut dolorem exercitationem veniam rerum. Recusandae, veniam necessitatibus. Nam eveniet id, repellendus deserunt beatae reprehenderit amet perferendis sequi!</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione et repellat inventore perspiciatis eos corrupti assumenda velit iste! Reiciendis praesentium ullam, minima ipsam non fugit aspernatur dolor ut. Nisi, officiis.</p>
-
+<div class="head">
+    <p></p>
+</div>
 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam, facilis consequatur molestias aliquam culpa suscipit eveniet impedit dolor obcaecati iste recusandae! Tempora, facere sapiente accusamus ipsum fuga ratione ab.
     <p>here  p is first child.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusamus quisquam est? Libero quo labore ipsum ut id. Minima, harum mollitia? Alias maiores explicabo neque aspernatur fugiat enim modi harum.</p>
     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nemo debitis, dicta illum, alias doloremque molestias iusto aspernatur quos repellendus officiis quisquam quasi dolorum eveniet earum sit itaque corporis velit?</span>
