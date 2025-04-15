@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li:first-child{
+            color:red;
+            margin-left: 200px;
+            font-size: large;
+            border:2px solid black;
+            background-color: yellow;
+            padding: 10px;
+        }
+        li:last-child{
+            color:white;
+            margin-left: 200px;
+            font-size: large;
+            border:2px solid black;
+            background-color: rgb(208, 0, 255);
+            padding: 10px;
+        }
+        /* p:first-child = where p is  first child.  */
+        /* p:first-child = div p:first-child */
+
+        p:first-child{
+            color:blue;
+            margin-left: 200px;
+            font-size: large;
+            border:2px solid black;
+            background-color: yellow;
+            padding: 10px;
+        }
+       div p:first-child{
+            color:blue;
+            margin-left: 200px;
+            font-size: large;
+            border:2px solid black;
+            background-color: yellow;
+            padding: 10px;
+        }
+        div li:nth-child(2n+1){
+            /* here n= natural number ex- 123.... */
+            color:blue;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- every pseudo-class has : before the name -->
+    <h1>CSS Pseudo-classes</h1>
+    <ul>
+        <li>list one</li>
+        <li>list two</li>
+        <li>list three</li>
+        <li>list four</li>
+        <li>list five</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eius odio voluptates aperiam consequuntur ducimus ab ipsum? Dicta laudantium consectetur nisi voluptatibus, esse quidem cum dolorem ut placeat in temporibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem asperiores sed corporis. Consequuntur itaque reiciendis sit non dolore? Suscipit eveniet necessitatibus dolores quas explicabo, est provident excepturi impedit consequuntur voluptate!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus.</p>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore vero dolores omnis velit voluptatibus ex culpa incidunt excepturi. Vero dignissimos dolores voluptatem doloremque est similique earum expedita dolorem labore.</p>
+
+    </ul>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, expedita doloribus! Ad ut dolorem exercitationem veniam rerum. Recusandae, veniam necessitatibus. Nam eveniet id, repellendus deserunt beatae reprehenderit amet perferendis sequi!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione et repellat inventore perspiciatis eos corrupti assumenda velit iste! Reiciendis praesentium ullam, minima ipsam non fugit aspernatur dolor ut. Nisi, officiis.</p>
+
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam, facilis consequatur molestias aliquam culpa suscipit eveniet impedit dolor obcaecati iste recusandae! Tempora, facere sapiente accusamus ipsum fuga ratione ab.
+    <p>here  p is first child.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusamus quisquam est? Libero quo labore ipsum ut id. Minima, harum mollitia? Alias maiores explicabo neque aspernatur fugiat enim modi harum.</p>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nemo debitis, dicta illum, alias doloremque molestias iusto aspernatur quos repellendus officiis quisquam quasi dolorum eveniet earum sit itaque corporis velit?</span>
+    <h6>last line</h6>
+    <div>
+    <ul id="list">
+        <li>list one=1</li>
+        <li>list two=2</li>
+        <li>list three=3</li>
+        <li>list four=4</li>
+        <li>list five=5</li>
+    </ul>
+    </div>
+</div>
+</body>
+</html>
