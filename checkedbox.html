@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CostomPicture.css">
+    <style>
+        body{
+    margin:0;
+    padding:0;
+    height:100vh;  
+    background:#23E3C9;
+}
+.slider{
+    border:2px solid black;
+    width: 700px;
+    border-radius:10px;
+    /* overflow:hidden; */
+}
+.slides{
+    border:2px solid red;
+     width: 2800px;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+   
+    transition: 2s;
+}
+.slide img{
+    width:700px;
+    height: 500px;
+}
+.navigation-manual{
+position: absolute;
+width: 700px;
+margin-top:-25px;
+display: flex;
+justify-content: center;
+}
+
+.manual-btn{
+    border:2px solid white;
+    padding:5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #40D3DC;
+}
+/* here will be margin left when radio1 is checked that is id of input tag */
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -700px;
+}
+#radio3:checked ~ .first{
+    margin-left: -1400px;
+}
+#radio4:checked ~ .first{
+    margin-left: -2100px;
+}
+
+    </style>
+</head>
+<body>
+
+ <div class="slider">
+ <div class="slides">
+ 
+ <input type="radio" name="radio-button" id="radio1">
+ <input type="radio" name="radio-button" id="radio2">
+ <input type="radio" name="radio-button" id="radio3">
+ <input type="radio" name="radio-button" id="radio4">
+
+ <div class="slide first">
+ <img src="images.jpeg" alt="picture" height="500px" width="700px">
+ </div>
+ <div class="slide">
+ <img src="colorful-birds.jpeg" alt="picture" height="500px">
+ </div>
+ <div class="slide">
+ <img src="images.jpeg" alt="picture " height="500px">
+ </div>
+ <div class="slide">
+ <img src="colorful-birds.jpeg" alt="picture " height="500px">
+ </div>
+ </div> 
+ <div class="navigation-manual">
+ <label for="radio1" class="manual-btn"></label>
+ <label for="radio2" class="manual-btn"></label>
+ <label for="radio3" class="manual-btn"></label>
+ <label for="radio4" class="manual-btn"></label>
+ </div> 
+ </div> 
+   <script type="text/javascript">
+  var counter = 1;
+  setInterval(function () {
+  document.getElementById('radio' + counter).checked = true;
+  counter++;
+  if (counter > 4) {
+  counter = 1;
+  }
+  }, 3000);
+  </script>
+</body>
+</html>
