@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //data types in javascript
+        // number ,string ,array, object,boolean,null, undefined
+//three type of variables in js
+// var ,let, const,
+// we can redeclare and reasign
+var name = "sahiba";  
+var name = "Sahiba Parveen";    //we can redeclare 
+name = "saba";       //also assign
+document.write("Name : "+ name + "<br>");
+ 
+//now we talk about let type of variable
+let age = 20;
+age = 21;  //only we can reassign 
+//we can't redeclare
+document.write("Age : "+age + "<br>");
+
+//now we talk about const type of variable
+const roll = 324103144;
+// roll = 324103145; //we can't reassign and redeclare
+document.write("Roll : " + roll + "<br>");
+
+
+ // now we tall about operators
+ // in javascript we have many operators
+ //1. Arithmetic Operators +. -, *, /, %, ++, --
+ //2. Assignment Operators =, +=, -=, *=, /=, %=
+    //3. Comparison Operators ==, ===, !=, !==, >, <, >=, <=
+    //4. Logical Operators &&, ||, !
+
+    //now we talk about conditional statements
+    // if, else if, else, switch case
+     document.write("<br>");
+     if (age >= 18) {
+        document.write("You are eligible to vote <br>");
+     }
+
+
+        else if (age >= 16) {
+            document.write("You are not eligible to vote <br>");
+        }
+        else {
+            document.write("You are not eligible to vote <br>");
+        }
+        // now we talk about switch case
+         document.write("<br>");
+        let code = 2;
+        switch (code){
+            case 1:
+                document.write("Now your are in Semester 1 <br>");
+                break;
+            case 2:
+                document.write(" Now your are in Semester 2 <br>");
+                break;
+            case 3:
+                document.write("Now your are in Semester 3 <br>");
+                break;
+            case 4:
+                document.write(" Now your are in Semester 4 <br>");              
+                break;
+                default:
+                 document.write("Invalid code <br>");
+        }
+       
+        // now we talk about loops
+        // for, while, do while,forEach, for in,
+         document.write("<br>");
+ document.write("It has 6semesters in bca <br>");
+        for(let i=1; i<7; i++){
+           
+            document.write("sem " + i + "<br>");
+        }
+        document.write("<br>");
+        // now we talk about while loop 
+        document.write("fee semesters <br>");
+       let k=6;
+       while(k>0){
+        document.write("sem " + k +  " "+ "36000" + "<br>");
+        k--;
+       }
+       document.write("<br>");
+         // now we talk about do while loop
+         let i =1;
+         do{
+          
+          
+          document.write("number is " + i + "<br>");
+          i++;
+
+         }
+         while(i<10);  //jab tak i 10 se chota hai chalega loop do while
+         //jab tak i 0 se bada hai chalega loop while (i>0)
+        document.write("close the time <br>");
+        
+    //     let j;
+    //    do {
+    //       j= prompt("Enter password:");
+          
+
+    //    } while (j != 21); // vab tak input lete raho jab tak 21 na mil jaye.
+    //      document.write("You entered: " + j);
+        
+        //now we talk about for in loop
+
+        // documet.write("use for in loop");
+
+        // document.write("<br>");
+        // let man={
+        //     name:"sabiha",
+        //     age:20,
+        //     roll:31
+        // };
+        // //key =name,age, roll 
+        // //value =sabiha, 20, 31
+        // for(let i in man){
+        //     document.write(i + ":" + man[i] + "<br>");
+        // }
+        document.write("<br>");
+        document.write("use forEach loop <br>");
+        let arr=[
+            "sahiba",
+            "parveen",
+            "bca",
+            "student"
+        ];
+        arr.forEach(function( value,index){
+            document.write("Index: " + index + ", Value: " + value + "<br>");
+        })
+        //now we talk about functions that return value
+        function add(a,b){
+            return a+b;
+                    }
+                    document.write("add two number is"+ add(10,20)+"<br>")
+                    document.write("<br>");
+        
+
+        //now we talk about functions that don't return value
+        function sub(a,b){
+            document.write("subtraction of two number is " + (a-b) + "<br>");
+        }
+        sub(20,10);
+        //now we talk about popup 
+      //alert,confirm -return value,prompt-return value
+//we have two types of keyword 
+//break-it break the loop , continue -it skip the current iteration and continue to the next iteration
+
+//we have two types of variable global and local variable
+//global variable - it is declared outside of any function and can be accessed from anywhere in the code
+//local variable - it is declared inside a function and can only be accessed within that function
+
+// now we talk about arrays method and write program
+document.write("<br>");
+document.write("aply array basic methods <br>");
+
+ let arr1 = [1, 2, 3, 4, 5];
+       arr1.push(7);
+         document.write("After push method: " + arr1 + "<br>");
+
+         arr1.pop();
+            document.write("After pop method: " + arr1 + "<br>");
+
+            arr1.shift();
+            document.write("After shift method: " + arr1 + "<br>");
+
+            arr1.unshift(1);
+            document.write("After unshift method: " + arr1 + "<br>");
+
+             arr1[2] = 10; //update the value at index 2
+            document.write("After updating index 2: " + arr1 + "<br>");
+
+document.write("<br>");
+//now we talk about string menthods
+let str = "Hello, World!";
+document.write("Original String: " + str + "<br>");
+document.write("Length of String: " + str.length + "<br>");
+let upperstr = str.toUpperCase();
+document.write("Uppercase String: " + upperstr + "<br>");
+let lowerstr = str.toLowerCase();
+document.write("Lowercase String: " + lowerstr + "<br>");
+let replacedStr = str.replace("World", "JavaScript");
+document.write("Replaced String: " + replacedStr + "<br>");
+let str2 = "hello how are you";
+let addstring = str.concat(str2);
+document.write("Concatenated String: " + addstring + "<br>");
+
+           
+         
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
