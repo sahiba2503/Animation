@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+//inside the object we can write any type of datya it does not matter primitive 
+//and non primitive ,we write inside the object like, array object ,function etc
+
+ let createObj= {
+    Fname:"Sahiba",
+    Lname:" Parveen",
+    Roll:36,
+    marks:80,
+    fulname:function(Fname,Lastname){
+        return (Fname+Lastname);
+    },
+    musub:["java","math","html","Eng","dbms"],
+    subobj:{ math:75,java:81,html:87,dbms:83 }
+
+ };
+  document.write("print First name" + createObj.Fname);
+   document.write("print Full name" + createObj.fullname());
+    document.write("print subject's name" + createObj.musub);
+     document.write("print marks" + createObj.marks);
+ 
+  
+ //similarly
+ //we can write array inside the array and  we can write object inside the object also.
+ document.write("print the value of an array");
+ let myA=[sahiba,36,true, 83.1,{math:80,dbms:83,html:79,eng:75}, [73,90,65,69,83]  ]
+ document.write(myA[1]);
+ document.write(myA[4]);
+ document.write(myA[5]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

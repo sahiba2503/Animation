@@ -365,8 +365,561 @@ document.write("my original value is <br>"+a7+"<br>");
 let res2=Array.isArray(a7);
 document.write(a7+"  is an array .."+res2+"<br>");
 
+
+
+//length,push,pop,shift,unshift,sort,slice,splice,indexOf,lastIndexOf,concat,join,reverse,includes,find,findIndex,every,some,filter,
+document.write("<br>.............first.........<br>");
+let A8=["sahiba","parveen","bca","student"];
+let A9=["sabiha","parvin","ba","student"];
+document.write("my first original array is <br>"+A8+"<br>");
+document.write("my second original array is <br>"+A9+"<br>");
+document.write("<br>if i want to add Array1 + Array2 <br>");
+let AreValue = A8.concat(A9);
+document.write("After applying concat method <br>");
+document.write("Now my concatinate array is "+AreValue+"<br>");
+
+document.write("<br>.............second.........<br>");
+let A10=["sahiba","parveen","bca","student"];
+document.write("my original array is <br>"+A10+"<br>");
+let AreValue2 = A10.join("--");
+document.write("After applying join method <br>");
+document.write("Now my join array is "+AreValue2+"<br>");
+
+document.write("<br>............third.........<br>");
+let A11=["sahiba","parveen","bca","student"];
+document.write("my original array is <br>"+A11+"<br>");
+let AreValue3 = A11.reverse();
+document.write("After applying reverse method <br>");
+document.write("Now my reverse array is "+AreValue3+"<br>");
+
+document.write("<br>.............first.........<br>");
+let A12=["sahiba","parveen","bca","student"];
+document.write("my original array is <br>"+A12+"<br>");
+let A13= A12.includes("parveen");
+//includes method returns only true or false
+document.write("is parveen present in my original array or not <br>"+A13+"<br>");
+
+
+document.write("<br>.............second.........<br>");
+let A14=["sahiba","parveen","bca","student"];
+document.write("read the element of an array on by one<br>");
+
+for(let i=0; i<A14.length; i++){
+    document.write("on " +i+ " index - "+A14[i]+"<br>");
+ 
+    }
+    document.write("total length of an array is "+ A14.length +"<br>");
+
+    document.write("<br>............third.........<br>");
+let A15=["sahiba","parveen","bca","student"];
+document.write("read the element of an array on by one using forEach method<br>");
+document.write(" is bca present or not in my array <br>");
+for(let i=0; i<A15.length; i++){
+    if(A15[i] !== "bcca"){
+        document.write("bca is present in my array <br>");
+    }   
         
-         
+    }
+
+   document.write("<br>............third.........<br>");
+let A16=["sahiba","parveen","bca","student"];
+document.write("read the element of an array on by one using forEach method<br>");
+A16.forEach(function(value,index){
+   
+    document.write("index " +index +" is "+value+"<br>");
+});
+document.write("<br>.............first.........<br>");
+let A17=[22,44,66,88,99];
+document.write("my original array is <br>"+A17+"<br>");
+document.write("Create a new array   <br>");
+A18=A17.filter(myfunction);
+function myfunction(value){
+    return value > 50;}
+document.write("After applying filter method <br>");
+document.write("my new array is tha's all element is greater than 50 "+A18+"<br>");
+
+document.write("<br>.............second.........<br>");
+let A19=[22,44,66,88,99];
+document.write("my original array is <br>"+A19+"<br>");
+document.write("now i am going to check 66 is available or not <br>");
+let A20 = A19.includes(66);
+document.write("After applying includes method <br>");
+document.write("66 is present in my array or not <br>"+A20+"<br>");
+
+document.write("<br>............third...........<br>");
+let A21=[22,44,66,88,99];
+document.write("my original array is <br>"+A21+"<br>");
+document.write("now i am going to any element is greater than 50 or not <br>");
+let A22= A21.some(myfunction2);
+function myfunction2(value){
+    return value > 50;
+}
+document.write("After applying some method <br>");
+document.write("is there any element greater than 50 in my array or not <br>"+A22+"<br>");
+
+document.write("<br>............fourth...........<br>");
+let A23=[22,44,66,88,99];
+document.write("my original array is <br>"+A23+"<br>");
+document.write("now i am going to all element is greater than 50 or not <br>");
+let A24= A23.every(myfunction2);
+function myfunction2(value){
+    return value > 50;
+}
+document.write("After applying every method <br>");
+document.write("is there all element greater than 50 in my array or not <br>"+A24+"<br>");
+
+document.write("<br>............fifth...........<br>");
+let A25=[22,44,66,88,99];
+document.write("my original array is <br>"+A25+"<br>");
+document.write("now i am going to check a contion and return value that first element match the condition <br>");
+let A26= A25.find(myfunction2);
+function myfunction2(value){
+    return value >= 50;
+}
+document.write("After applying find method <br>");
+document.write("is there all element greater than 50 in my array or not <br>"+A26+"<br>");
+
+document.write("<br>.............first.........<br>");
+let A27=[22,44,66,88,99];
+document.write("my original array is <br>"+A27+"<br>");
+document.write ("now i am going to put a specific vlaue in all element of an array <br>");
+let A28= A27.fill(100);
+document.write("After applying fill method <br>");
+document.write("Now my array is <br>"+A28+"<br>");
+
+document.write("<br>.............second.........<br>");
+let A29=["saniya","zakiya","sajiya","sadiya"];
+document.write("my original array is <br>"+A29+"<br>");
+document.write("now i am going to check 'saniya' is available or not <br>");
+let A30 = A29.includes("saniya");
+document.write("After applying includes method <br>");
+document.write("'saniya' is present in my array or not <br>"+A30+"<br>");
+
+
+document.write("<br>.............third.........<br>");
+let A31=["saniya","zakiya","sajiya","sadiya"];
+let A32=A31.valueOf();//or
+//document.write("my original array is <br>"+A31+"<br>");
+document.write("my original array is <br>"+A32+"<br>");
+
+document.write("<br>............fourth.........<br>");
+let A33=["saniya","zakiya","sajiya","sadiya"];
+document.write("my original array is <br>"+A33+"<br>");
+let A35=A33.toString();
+document.write("now i have used toString() that convet array to string<br>");
+document.write("Now my array is converted to string <br>"+A35+"<br>");
+document.write("After applying toString() we can't use any array's methods<br>");
+
+
+document.write("<br>.............first.........<br>");
+document.write("<br>.....find a value then delete with index...<br>");
+let A36=["saniya","zakiya","sajiya","sadiya"];
+document.write("my original array is <br>"+A36+"<br>");
+document.write("if sajiya is in my array  then delete with index<br>");
+let getposition = A36.indexOf("sajiya");
+//document.write("if indexOf() return -1 it means not available<br>");
+if(getposition === -1){
+    document.write("sajiya is not available in my array <br>");
+}
+else if(getposition !== -1){
+    A36.splice(getposition,1);
+    document.write("find value is deleted from my array<br>");
+    document.write("Now my array is <br>"+A36+"<br>");
+}
+
+document.write("<br>.............second.........<br>");
+document.write("<br>...we have to add sum value in all elemnt of an array..<br>");
+let A37=[81,29,37,74,45];
+document.write("my original array is <br>"+A37+"<br>");
+document.write("add 11 in all element <br>");
+let A38=A37.forEach(function(value,index){
+    value = value + 11;
+    document.write("index " + index + " is " + value + "<br>");
+})
+
+document.write("<br>.............third.........<br>");
+//i want to display students marks and if any students marks is 
+//28 or less than 30 then give some number for compleating 30 that is pass marks
+//and print only that marks that is greater than 
+document.write("<br>..if any value is greater than 28 or less than 30<br>");
+document.write("then give some number for compleating 30 that is pass marks<br>");
+let A39=[81,29,27,28.7,45,28.1,29.9,28];
+document.write("I considered all element is students marks <br>"+A39+"<br>");
+document.write("<br>give grees marks that is equl to 28 or less than 30 <br>");
+document.write("dislay only pass marks that is 30 or greater than 30 <br><br>");
+let rem;
+let A40=A39.forEach(function(value,index){
+    if(value >=28){        
+       if(value >= 28 && value < 30 ){        
+        rem = 30 - value;
+        value = value + rem;
+    }
+    //we use rnary Operator or Conditional Operator.
+else{
+    rem = 0;
+    value = value;
+}
+var intnum;
+//if we want to convert float to integer then we use Math.trunc() method
+//Math.trunc() method returns the integer after removing all floating-point.
+document.write("posistion " + index + " is " + 
+(value > 30 ? value : value + " with gress marks " + 
+(intnum = Math.trunc(rem)) + "<br>"));
+    }   
+   
+})
+
+document.write("<br>....remove duplicate elements....<br>");
+//How do you remove duplicate elements from an array?
+let A41 = [1, 3, 2, 3, 4, 5, 1, 2, 3];
+document.write(" <br> My original array is "+A41+"<br>");
+for( let i=0; i<A41.length; i++){
+    for(let j=i+1; j<A41.length; j++){
+        if(A41[i] === A41[j]){
+            A41.splice(j,1);//;
+            //j defined the position of the duplicate element
+
+        }
+    }
+}
+ document.write("Now my array is "+A41+"<br>");
+
+ 
+ 
+ 
+ //sort number?
+document.write("<br>....sort number?....<br>");
+let A42 = [2,4,1,7,3,6,5];
+document.write(" <br> My original array is "+A42+"<br>");
+function mysortfun(a,b){
+    return a-b; 
+}
+let A43=A42.sort(mysortfun);
+ document.write("Now my array is sorted in ascending order "+A43+"<br>");
+ 
+
+//Do first Short array then tell which is
+// greater or smaller with the use of for loop?
+// document.write("<br>....sort with loop ....<br>");
+// let A44 = [19, 31, 72, 43, 24, 51, 91, 52, 32];
+// document.write(" <br> My original array is "+A44+"<br>");
+// for( let i=0; i<A44.length; i++){
+//     for(let j=i+1; j<A44.length; j++){
+//         if(A44[i] < A44[j]){
+//             let temp = A44[i];
+//             A44[i] = A44[j];
+//             A44[j] = temp;
+//         }
+//     }
+// }
+//  document.write("My sorted order "+A44+"<br>");
+//  document.write("my largest element "+A44[0]+"<br>");
+//   document.write("my smallest element "+A44[A44.length-1]+"<br>");
+
+//   //sum of all element of an array and average of all element of an array
+//     let A45 = [1, 2, 3, 9,4, 5];
+//     document.write(" <br> My original array is "+A45+"<br>");
+//     let sum = 0;
+//     for(let i=0; i<A45.length; i++){
+//         sum =sum + A45[i];
+//         //sum += A45[i]; //same 
+//     }
+//     document.write("sum of all element of an array is "+sum+"<br>");
+//     document.write("average of all element of an array is "+(sum/A45.length)+"<br>");
+
+document.write("<br>....find second largest and smallest element of an array....<br>");
+let A49 = [1, 2, 5, 3, 9, 3, 5, 4, 1, 5];
+document.write(" <br> My present array is "+A49+"<br>");
+let mysorta = A49.sort(mysortf);
+document.write("my array is sorted in descending order "+mysorta+"<br>");
+function mysortf(a,b){
+    return b-a;//descending order
+    
+
+}
+for( let i=0; i<A49.length; i++){
+    for(let j=i+1; j<A49.length; j++){
+        if(A49[i] === A49[j]){
+
+            A49.splice(j,1);//;
+             j--;
+            //j defined the position of the duplicate element
+        }
+
+    }
+}
+document.write("remove all dublicate element "+A49+"<br>");
+
+document.write("second largest element is "+A49[1]+"<br>");
+document.write("largest element is "+A49[0]+"<br>");
+document.write("smallest element is "+A49[A49.length-1]+"<br>");
+document.write("second smallest element is "+A49[A49.length-2]+"<br>");         
+
+
+// document.write("<br>..print the 2d array..<br>");
+// let A50 =[
+//     [1,2,3,4,5],
+//     [6,7,8,9,10],
+//     [11,12,13,14,15]
+// ]
+// document.write(" <br> My present 2d array is <br>");
+// document.write("<br>");
+// for(let i=0; i<A50.length; i++){
+//     for(let j=0; j<A50[i].length; j++){
+//         document.write(A50[i][j] + " ");
+//     }
+//     document.write("<br>");
+// }
+
+
+
+document.write("<br>..add two matrix between same position..<br>");
+document.write("<br>..print the 2d array..<br>");
+let A51 =[
+    [1,2,3,4,5],
+    [6,7,8,9,10],
+    [11,12,13,14,15]
+]
+document.write(" <br> My  secon present 2d array is <br>");
+document.write("<br>");
+for(let i=0; i<A51.length; i++){
+    for(let j=0; j<A51[i].length; j++){
+        document.write(A51[i][j] + " ");
+    }
+    document.write("<br>");
+}
+
+let A52 =[
+    [1,2,3,4,5],
+    [6,7,8,9,10],
+    [11,12,13,14,15]
+]
+document.write(" <br> add 10 in all element <br>");
+document.write("<br>");
+for(let k=0; k<A52.length; k++){
+    for(let l=0; l<A52[k].length; l++){
+        document.write(A52[k][l] + 10 + " ");
+    }
+    document.write("<br>");
+}
+
+document.write("<br>..if i have an array and in which array a value is missing and that");
+document.write(" missing place any repeated value for this condition");
+document.write("i have find the ans ..<br>");
+
+let myoriginalarr=[1,2,3,4,5,2,7,8,9,10];
+let myArr=[1,2,3,4,5,6,7,8,9,10];
+
+document.write(" <br> My original array is "+myoriginalarr+"<br>");
+for(let i=0; i<myoriginalarr.length; i++){
+    
+    
+        if(myoriginalarr[i] !== i+1){
+            document.write(" misising value is "+(i+1)+"<br>");
+            document.write("repeated "+myoriginalarr[i]+"<br>");
+           
+        }
+    
+}
+//if I have unsorted array and find out how many value is repeated and missing.
+//1-we will do sort tha array in ascending order
+//2-then we will find out repeated and missing values
+//3-then we will remove repeated value
+//4-then we will find out missing value
+//5-then we will add missing value (or 0 in missing value)in array
+//6-then we will print the final array
+
+let ARR=[1,2,9,3,4,5,2,7,9,10];
+document.write(" <br> My original array is "+ARR+"<br>");
+//firs of all we have to sort the array in asending order.
+let sortresult=ARR.sort(myAscendingfun);
+document.write(" <br> Now my array is sorted "+sortresult+"<br>");
+function myAscendingfun(a,b){
+    return a-b;
+}
+//sort method chenge the original array.
+for(let i=0; i<ARR.length; i++){
+    for(let j=i+1; j<ARR.length; j++){
+        if(ARR[i] === ARR[j]){
+            document.write("repeated value is "+ARR[i]+"<br>");
+            ARR.splice(j,1); //remove the repeated value
+            break;
+        }
+        
+    }    
+}
+document.write("Now my array is "+ARR+"<br>");
+document.write("Now i am going to find out missing value in my array <br>");
+for(let i=0; i<ARR.length; i++){
+    if(ARR[i] !== i+1){
+        document.write("missing value is "+(i+1)+"<br>");
+        ARR.splice(i ,0,0);
+        //  ARR.splice(i ,0,i+1); for adding missing vlaue
+    }
+}
+//find largest element
+document.write("Now i am going to check which element is greatest<br>");
+let myArra=[1,2,3,4,5,60,9,4,5,10];
+document.write(" <br> My original array is "+myArra+"<br>");
+for(let i=1; i<myArra.length; i++){
+    if(myArra[0] < myArra[i])
+{
+    myArra[0] = myArra[i];
+} 
+}
+document.write("largest element is "+myArra[0]+"<br>");
+
+//find smallest element
+let myArray=[10,20,30,40,5,60,9,40,50,10];
+document.write(" <br> My original array is "+myArray+"<br>");
+for(let i=1; i<myArray.length; i++){
+    if(myArray[0] > myArray[i])
+{
+    myArray[0] = myArray[i];
+} 
+}
+document.write("smallest element is "+myArray[0]+"<br>");
+
+// we will use for loop different way
+//find largest element
+document.write("Now i am going to check which element is greatest<br>");
+let myArra2=[1,2,3,4,5,60,9,4,5,10];
+document.write(" <br> My original array is "+myArra2+"<br>");
+for(let i=1; i<myArra2.length; i++){
+    if(myArra2[0] < myArra2[i])
+{
+    myArra2[0] = myArra2[i];
+} 
+}
+document.write("largest element is "+myArra2[0]+"<br>");
+
+//find smallest element
+let myArray2=[10,20,30,40,5,60,9,40,50,10];
+document.write(" <br> My original array is "+myArray2+"<br>");
+for(let i=1; i<myArray2.length; i++){
+    if(myArray2[0] > myArray2[i])
+{
+    myArray2[0] = myArray2[i];
+} 
+}
+document.write("smallest element is "+myArray2[0]+"<br>");
+
+
+
+
+// document.write("<br>.....taking input from user and store in array....<br>");
+// let size = parseInt(prompt("Enter the size of the array:"));
+// document.write("Size of the array is " + size + "<br>");
+// let MYArray = new Array(size);
+// let sum=0;
+
+// for(let i=0; i<size; i++){
+//     MYArray[i] = parseInt(prompt("Enter element " + (i + 1) + ":"));
+//     document.write("Element " + (i + 1) + " is: " + MYArray[i] + "<br>");
+//     sum=sum + MYArray[i];
+// }
+// document.write("The sum of All elements of  the array is: " + sum + "<br>");
+
+
+
+
+// document.write("<br>Take input from user and check exist or not.<br>");
+// let MYArray = new Array(10,20,30,40,50,60,70);
+// document.write("My original array is " + MYArray + "<br>");
+// //we can also define like this ...let myarrrr= [10,20,30,40,50,60,70];
+// let n = parseInt(prompt("Enter a number to check existence:"));
+// //we parseInt() method is used to convert string to integer
+// let  flag = false;
+// for(let i=0; i<MYArray.length; i++){
+//     if(MYArray[i] == n){
+//         flag =true;
+//         break;
+//     }
+//    }
+// if(flag){
+//     alert("The number " + n + " exists in the array.");
+//     document.write("The number " + n + " exists in the array.<br>");
+// }else{
+   
+//     alert("The number " + n + " does not exist in the array.");
+//      document.write("The number " + n + " does not exist in the array.<br>");
+// }
+
+// document.write("Check the String is present or not");
+// let myCreatedpass = prompt("Create your password");
+// document.write("<br>My original password is " + myCreatedpass + "<br>");
+// let checkpass = prompt("verify your password");
+// if(myCreatedpass === checkpass){
+//     alert("Your password is correct");
+//     document.write("Your password is correct <br>");
+// }
+// else{
+//     alert("Your password is incorrect");
+//     document.write("Your password is incorrect <br>");
+// }//
+
+//write a program in which taking password from the user dont stop until user enter the correct password
+// document.write("<br>Taking password from user and don't stop until user enter the correct password.<br>");
+// let myCreatedpass = prompt("Create your password");
+// document.write("<br>My original password is " + myCreatedpass + "<br>");
+// let checkpass;
+// do {
+//     checkpass = prompt("Verify your password");
+//     if (myCreatedpass === checkpass) {
+//         alert("Your password is correct");
+//         document.write("Your password is correct <br>");
+//     } else {
+//         alert("Your password is incorrect, please try again.");
+//         document.write("Your password is incorrect, please try again. <br>");
+//     }
+// // } while (myCreatedpass !== checkpass);
+// document.write("<br>Taking password from user and don't stop until user enter the correct password.<br>");
+// document.write("Thank you for entering the correct password!<br>");
+
+//we can add primitive or non primitive data type inside the abject 
+//we can also add object inside the object.
+let myobje = {
+    name:"sahiba",
+    roll:36,
+    marks:80,
+    sub:["c","html","eng","dbs","cloud"],
+    digree:{
+        matric:60,
+        inter:70,
+        graduation:80
+    },
+    myfunc:function(){
+        document.write(" Now function is calling that name is myfunc");
+        return;
+    }
+};
+document.write("print all key and value of the object<br>");
+//simple value will print with key and value through the for in loop.
+// we can call function and print insite array with simple for in loop.
+// for(var key in myobje){
+//     document.write(key + " : " + myobje[key] + "<br>");}
+document.write("Now  i am printing the key's value of the object <br>");
+document.write("print name :" + myobje.name +"<br>");
+document.write( "print roll :" + myobje.roll +"<br>");
+document.write( "print marks :" + myobje.marks +"<br>");
+document.write("print subject :" + myobje.sub +"<br>");
+document.write( "print inter percentag :" + myobje.digree.inter +"<br>");
+document.write( myobje.myfunc());
+
+
+
+
+
+
+       
+    
+
+
+
+ 
+
+
+
     </script>
 </head>
 <body>
