@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         document.write("<br>this in string method<br>");
+
+ //let see all method of string
+ let mystr= "hii how's your day going";
+ 
+ document.write("<br> This is my line<br>"+mystr);
+ //charAt()
+ document.write("<br>character avalaible on index 4 is  :  " + mystr.charAt(4));
+
+ //we will see difference between substr and substring
+ //substr ()
+ document.write("this is my substr : " + mystr.substr(4 , 5));
+ //substr() focusses length of string
+
+ document.write("<br>this is my second string : " + mystr.substring(5,9) );
+ //include()
+ document.write("is include or not this string " + mystr.includes("your") );
+ //split()
+ document.write("convert string to array only one character in element<br> " + mystr.split(""));
+  //seperate word
+   document.write("<br>convert string to array only one character in element <br>" + mystr.split(" "));
+
+     //seperate in one element of an array 
+   document.write("<br>convert string to array only one character in element <br>" + mystr.split("..."));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const myObject = {
+            Fname:"sabana",
+            lname:"khatoon",
+            age:20,
+            city:"Dhaka",
+            country:"Bangladesh",
+            hobbies:["reading", "traveling", "cooking"],
+            isStudent:true,
+            greet: function() {
+                document.write("Hello, my name is " + this.Fname + " " + this.lname + ". I am " + this.age + " years old and I live in " + this.city + ", " + this.country + ".");
+            },
+            mybook:["eng", "math", "science", "bangla", "computer"],
+            subobject: {matric: 60, inter: 70,  graduation: 80}
+        };
+        myObject.greet();
+        document.write("<br>My subjects are "+ myObject.mybook.join(",")+".<br>");
+        document.write("<br>My subobject details:<br><br>");
+
+         for(let key in myObject){
+            if(typeof myObject[key] == "function"){
+                document.write ("<br>we cant display function through the for in loop<br><br>");
+                continue;
+            }            
+            document.write(key + ": " + myObject[key] + "<br>");
+         }
+         document.write("<br>type of key:<br><br>"+ typeof myObject.Fname + "<br>");
+          document.write("<br>Type of key:<br><br>"+ typeof myObject.subobject + "<br>");
+
+
+// now we will see what are the different between forin loop and forEachloop.
+//for in loop is used to iterate the object key and value.
+//while forEach loop is used to iterate the array elements.
+       document.write("<br>Now we will see the Array for in loop<br><br>");
+       let mysortarray = [5,7,9,2,3,];
+       for (let index in mysortarray) {
+           document.write("Value: " + mysortarray[index] + ", Index: " + index + "<br>");
+       }
+       //we can also use for of loop to iterate the array.
+         document.write("<br>Now we will see the Array with for of loop<br><br>");
+         for (let value of mysortarray) {
+              document.write("Value: " + value + "<br>");
+            }
+
+
+       document.write("<br>Now we will see the object with  for in loop <br><br>");
+       let myObj={1:"sabana",2:"khatoon",3:20,4:"Dhaka",5:"Bangladesh"};
+       for (let key in myObj) {
+           document.write("Key: " + key + ", Value: " + myObj[key] + "<br>");
+       }
+       //now we are talking about empty object and how we can add properties to it.
+       let myemptyobj = new Object();
+       myemptyobj.name = "sabana";
+         myemptyobj.age = 20;
+         myemptyobj.city = "Dhaka";
+            myemptyobj.country = "Bangladesh";
+         myemptyobj.hobbies = ["reading", "traveling", "cooking"];
+            myemptyobj.isStudent = true;
+            document.write("<br>My empty object details:<br><br>");
+            document.write("Name: " + myemptyobj.name + "<br>");
+            document.write("Age: " + myemptyobj.age + "<br>");
+            document.write("Print all keys and values with for in loop:<br>");
+            for(let key in myemptyobj) {
+                if(typeof myemptyobj[key] == "function"){
+                    document.write ("<br>we cant display function through the for in loop<br><br>");
+                    continue;
+                }            
+                document.write(key + ": " + myemptyobj[key] + "<br>");
+            }
+            
+      
+       //we can function describe from two ways.
+       //using => arrow function.
+       const sum = (a,b) =>{
+              return a + b;
+       }
+       //here we used => instead of function keyword.
+       //when we use arrow operator then we no need to use function keyword.
+       //where we use arrow function we take a variable name and assign a function to it.
+
+         document.write("<br>Sum of 5 and 10 is: " + sum(5, 10) + "<br>");
+
+         // using normal function.
+            function multiply(a, b) {
+                return a * b;
+            }
+            document.write("Multiplication of 5 and 10 is: " + multiply(5, 10) + "<br>"); 
+
+// we can create empty array and add elements like this.
+            var mysmallarray =new Array();
+            mysmallarray[0]="abc";
+            mysmallarray[1] ="def";
+            mysmallarray[2] = "ghi";
+            mysmallarray[3] = "jkl";
+            document.write("<br>My small array details:<br><br>");
+            for(let i = 0; i < mysmallarray.length; i++) {
+                document.write("1Index: " + i + ", Value: " + mysmallarray[i] + "<br>");
+            }
+            //we can also use forEach loop to iterate the array.
+            document.write("<br>Now we will see the Array with forEach loop<br><br>");
+            mysmallarray.forEach((value,index) => {
+                document.write("Value: " + value + ", Index: " + index + "<br>");
+            });
+            //we can also use forEach loop to iterate like this way.
+            document.write("<br>//we can also use forEach loop to iterate the array another way.<br><br>");
+            mysmallarray.forEach(function(value,index){
+                 document.write("Value: " + value + ", Index: " + index + "<br>");
+            });
+           
+
+ var myobje= new Object();//we can create empty object  like this
+ //how we can access the object properties with for loop
+    myobje.name = "sabana";
+    myobje.age = 20;
+    myobje.city = "Dhaka";
+    myobje.country = "Bangladesh";
+    myobje.hobbies = ["reading", "traveling", "cooking"];
+    myobje.isStudent = true;
+    document.write("<br>My object details:<br><br>");
+    //we can access the object properties with for loop
+    //we can access the object properties with for in loop
+    for (let key in myobje){
+        if(typeof myobje[key] == "function"){
+            //myobje[key] ==  object's key value
+            document.write ("<br>we cant display function through the for in loop<br><br>");
+            continue;
+
+        }
+        document.write(key + ": " + myobje[key] + "<br>");
+        //key denotes the properties name of the object 
+        //myobje[key] denotes the value of the properties
+    }
+    //if i want to show which type of key's value in my object
+    //we can't understand type of value through the key
+    let objectkeytype= new Object();
+    objectkeytype.name = "sabana";
+    objectkeytype.age = 20;
+    objectkeytype.city = "Dhaka";
+    objectkeytype.address = ["Dhaka", "Bangladesh"];
+    objectkeytype.myobjfunction = function() {
+        return "Hello from myobjfunction!";
+    };
+    for(let i in objectkeytype){ 
+        //we can also take another name instead of i that denotes the key of the object 
+        let key = i;
+    document.write("<br>Type of key:" + typeof objectkeytype[key] + "<br>");
+    }
+
+    //let's see how different between forEach loop and map().
+    document.write("<br>Now we will see the Array with map() method<br><br>");
+    //map() create a new array with some calculation on existing array.
+    //it does not change the original array.
+    // let newArray = myArray.map((value) => {
+    //     return value * 2;
+    // });
+    // document.write("<br>Original Array: " + myArray + "<br>");
+    // document.write("New Array (after map): " + newArray + "<br>");
+
+let myArray = [1, 2, 3, 4, 5];
+   let myres = myArray.map(mymapfunc);
+   document.write("<br>original Array : " + myArray + "<br>");
+    document.write("New Array (after map(multiply with 2)): " + myres + "<br>");
+   function mymapfunc(value){
+    //here pass one by one index value of the array
+    return value * 2; //multiply each value by 2
+       }
+
+   let myarray2 = ["sabana", "khatoon", "20", "Dhaka", "Bangladesh"];
+   let myres2 = myarray2.map(mymapfunc2);
+    document.write("<br>Original Array: " + myarray2 + "<br>");
+    document.write("New Array (after map): " + myres2 + "<br>");
+    function mymapfunc2(value){
+        if(typeof value === "string"){
+            return value.toUpperCase(); //convert each string to uppercase
+        }
+        else{
+            return value;
+        }
+    }
+
+document.write("<br>print the  String <br>");
+ //we are using string methods in string 
+   let mystring="Sahiba parveen";
+
+   //now we will see length property of string
+   document.write("length of string is " + mystring.length);
+
+ //to convert string to uppercase.
+ let mystring2 = mystring.toUpperCase();
+ document.write("<br><br>Uppercase string is <br>" + mystring2);
+
+ //to convert string to lowercase.
+ document.write("<br><br>Lowercase string is <br>"+ mystring.toLowerCase());
+
+ //we can check is string is available or not in my string.
+ let mystring3 = mystring.includes("hi");//includes() is an array method.
+ document.write("<br><br> Is 'hi' include  in my string? <br>"+ mystring3);
+  
+ //we can check index of a specific substring in my string.
+  let mystring4 = mystring.indexOf("ba");//indexof() is an array method.
+ document.write("<br><br>index of 'ba' in my string is <br>" +mystring4);
+ //or
+ document.write("<br>index of 'a' in my string is <br>"+mystring.indexOf("a"));
+
+ //we can find index of substring from the last of the string.
+  let mystring5 = mystring.lastIndexOf("a");//lastindexof() is an array method.
+    document.write("<br><br>Last index of 'a' in my string is <br>" + mystring5);
+
+    //we have search() method in string
+    let mystring6 = mystring.search("ba");
+    document.write("<br><br>Search index of 'ba' in my string is <br>"+ mystring6);
+    //search() returns the index of the first match substring in the string.
+
+
+
+
+   </script>   
+</head>
+<body>
+    <h1>My object's program</h1>
+</body>
+</html>

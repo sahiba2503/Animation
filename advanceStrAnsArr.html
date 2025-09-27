@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let mystr="Hellow how are you";
+        //we can conver array to string with the help of 
+        //split().
+        let mynewvalue= mystr.split("");
+        document.write("now convert string to array<br>" + mynewvalue);
+        document.write("<br><br> we can see type of value now<br>" + typeof mystr );
+                document.write("<br><br> we can see type of value now<br>" + typeof mynewvalue);
+        //now we will see check type of value
+
+        //now we whant to convert array to seperate space.
+      document.write("<br>now convert value to space into array <br>" + mystr.split(" "));
+
+      //convert array , now i want to seperate to a character.
+      document.write("<br><br> now convert value to seperate a character into array.<br>" + mystr.split("a"));
+
+       // how we can reverse string
+       //i know we have not any predefined method that
+       //is used for reverse string.
+       let mystr2="hellow how are you";
+       let value= mystr2.split("").reverse().join("");
+       document.write("<br>now my string is converted<br>" + value);
+
+
+       //we can convert array to string and convert string to array
+//join() used for convet the array to string.
+let myARR = ['s','a','h','i','b','a'];
+document.write("<br><br>this is my array<br>" + myARR);
+let mystrArr= myARR.join("");
+document.write("<br>here we can see conversation array to string <br>" + mystrArr);
+document.write("<br> type of value is : " + typeof mystrArr);
+
+
+//convet string to array.
+//we can convert split() 
+let mySTR = "hello who are you?";
+document.write("<br>this is my string : " + mySTR);
+document.write("<br> now my value type is : " + typeof mySTR );
+let mynewstr = mySTR.split("");
+document.write("<br> here we can see type of value after split()<br> " + typeof mynewstr);
+  
+//convert strint to array and seperate space
+let mynewstr2 = mySTR.split(" ");
+document.write("<br> here we can see <br> " +  mynewstr2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

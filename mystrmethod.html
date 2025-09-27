@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+ let mystrin="Sahiba parveen";
+ // we use slice method for taking substring.
+document.write("this is my string<br><br>" + mystrin);
+document.write("<br>substring - start from 11 index until before 14 <br>" + mystrin.slice(11, 14));
+
+//we use replace method.
+document.write("<br><br>replace substring <br>");
+document.write("this is my original string : "+mystrin)
+let val=mystrin.replace("hiba","biha");
+document.write("<br>this is my new string : "+val);
+
+//we can see anothor way for getting substring with substr()
+document.write("<br>we are going to remove sub strin<br>");
+let value= mystrin.substr(5,9);
+document.write("<br>here we can see <br>"+value );
+
+
+//with the help of toString() we can convert array to string
+let myAr=[1,2,3,4,];
+document.write("<br>This is my array : "+myAr);
+document.write("<br>which type of value here :"+ typeof myAr);
+let myAns=myAr.toString();
+document.write("What is type of value : "+ typeof myAns);
+ 
+//we can convert number to string with the help of toString()
+let num= 123456789;
+document.write("wich type of value here :"+typeof num.toString());
+
+//we can know is my string is start with specific value or not.
+let myline = "hellow sahiba how are you!";
+document.write("<br><br>This is my Original string : "+myline);
+let ansYesNo = myline.startsWith("hellow");
+document.write("<br>is my string start from hellow ? " + ansYesNo);
+  
+//we can know is my string is end with specific value or not.
+let myline2 = "hellow sahiba how are you!";
+document.write("<br><br>This is my Original string : "+myline2);
+let ansYesNo2 = myline.endsWith("YOU!");
+document.write("<br>is my string start from hellow ? <br>" + ansYesNo2);
+ 
+//we can add two or more string
+let firstStr ="Fisrt";
+let secondStr = "Second";
+let thirdStr = "Thirt"
+document.write("concate two  or more string  with the hetp of fun: "+ firstStr.concat(secondStr));
+//we can also take + operator for concatinate.
+document.write("<br>Concate two or more string : "+ firstStr + secondStr + thirdStr);
+
+
+
+//**********************************
+//we will see about trim();
+let myStr="     hellow how are you!    ";
+document.write("<br><br>this is my string<br><br>"+myStr);
+
+// alert(myStr);
+let myStr2="hellow how are you!";
+document.write("this is my string without extra outside space<br>");
+var notspace = myStr2.trim();
+// alert(notspace);var notspace = myStr.trim();
+ //here we can see the difference mystr and notspace string's space.
+  
+ // charAt take index and give the value of that index . 
+ document.write("<br>this is my original string"+myStr);
+ let myA=myStr2.charAt(7);
+ document.write("<br>on 7 index value character is : "+myA);
+
+//split used for deleting substring from any possition.
+ document.write("<br><br>this is my string befor removing sub string<br>"+myStr);
+ document.write("<br>this is my string after removing substring : <br> " + myStr.split("hellow"));
+
+ //we can use or not for printing or accessing the value.
+ document.write("<br>print string with valueOf() <br>"+ myStr.valueOf());
+  //
+  let mylin=" name my name is sahiba sahiba and your name ?";
+  document.write("<br> This is my line <br>"+mylin);
+  let A= mylin.match(/name/g);
+  //g denoted golobally seach.
+  //if i want to search and get same value when present 
+  //then no need g
+  document.write("<br>print  time present value in my line<br>" + A);
+
+  //slice is an array method and substring is a string method
+  //both method slice and substring work similarly in string
+    document.write("<br> now my line is : "+myStr);
+  document.write("<br>we are getting substring though the substring :"+ myStr.substring(5, 11));
+  //5 indecate starting point and 11 indecate before position from where we will take sub string.
+
+
+ 
+    </script>
+</head>
+<body>
+    <h3>this is my string</h3>
+    
+</body>
+</html>

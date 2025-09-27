@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Number method conter value in numbert if possible.
+        let num= "123";
+        document.write("<br>my value type is <br>"+ typeof num);
+        let value= Number(num);
+        document.write("<br>convert string to the number if possible<br>"+ value);
+        document.write("<br>now value type is  : " + typeof value)
+
+        let num2= "123A";
+         document.write("<br>my value type is <br>"+ typeof num2);
+          document.write("<br>my value type is <br>"+ Number(num2));
+          //here Number method can't be conver in numbet because A is a character.
+
+          //now we will talk about probint()
+          let num3 ="123.56"; // "123 56"
+           document.write("<br><br>now value type is  : " + typeof num3);
+           //parseInt() convert value into inteager if possible.
+           let value2= parseInt(num3);
+          document.write("<br>integer value are : "+ parseInt(num3));
+           document.write("<br> after using parseInt() value type is <br>"+ typeof value2);
+
+                     //now we will talk about probint()
+          let num4 ="321abc";
+           document.write("<br><br>now value type is  : " + typeof num4);
+           //parseInt() convert value into inteager if possible.
+           let value3= parseInt(num4);
+          document.write("<br>integer value are : "+ parseInt(num4));
+           document.write("<br> after using parseInt() value type is <br>"+ typeof value3);
+
+           //now we will talk about parseFloat()
+          let num5 ="123.35Abc"; // "123.56"
+           document.write("<br><br>now value type is  : " + typeof num5);
+           //parseFloat() convert value into float if possible.
+           let value4= parseFloat(num5);
+          document.write("<br>float value are : "+ parseFloat(num5));
+           document.write("<br> after using parseFloat() value type is <br>"+ typeof value4);
+
+          //now we will see infinite()
+          let numb = 123499999999999999999999999999999999999;
+          document.write("check finite or infinite number : " + isFinite(numb));
+
+
+             let numb2 = 123.6;
+           document.write("<br>Check integer number : " + Number.isInteger(numb2));
+
+           //toFixed()
+         let numb3 = 123.4999;
+         let = myans = Numb3.toFixed(2);
+          document.write("<br>fixed how many digit after decimal : " + myans);
+
+        //topricious()
+    let Numb = 123.4567;
+    let Answ = Numb.toprecision(5);
+    documnet.write("fixed digit include float value : " + Answ);
+    // today we will know all array method 
+    //pop():this method used for deleting last element from the array.
+    // push(): this method used for adding element in the last.
+    // shift(): this method used for deleting first present elemnet from the array.
+    // unshift():this method used for adding element in fist 
+    // indexOf():this method return index from the starting position of the element
+    //  which element i am searching is available then return
+    // lastIndexOf():this method return index of the element from the last position  which come first .
+    // slice():this method used for taking slice from the element ,we can take slice from any position.
+    // splice() :this method used for adding new element and deleting some element
+    // some():this method used for checking condition if at list one  element pass condition it return true.
+    // every() : this method used for checking condition if any one  element not  pass condition it return false.,
+    // fill():it copy same value in all present index.
+    // filter():it create a array from all element which element pass the condition
+    //sort(): this method return sort array in assending order array 
+    // reverse() this method return reverse order 
+    // include(): it return boolean value when it find value or not 
+    // find() :it return same value which value math in the array 
+    // concate():this method concate two or more array .
+    // forEach():this method used for printing element or index
+    // map():it return new array  after some calculation with present array element's value
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

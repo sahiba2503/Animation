@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class sumelement {
     public static void main(String[] args){
        
+        //my array
+        
+
         int sum = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of array "); 
