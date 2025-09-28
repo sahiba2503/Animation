@@ -385,5 +385,54 @@ console.log("program number 5.1 <br>");
             // var num17ans = Math.random().toFixed(1)*10;
             console.log("num17ans is : " + num17ans);
 
+            console.log("program number 0 <br>");
+            //we are using date method
+            var now = new Date();
+            console.log(now);
 
+             console.log("program number 1 <br>");
+          var mydatesec = now.getSeconds();
+            console.log("now second is : " + mydatesec);
 
+             console.log("program number 2 <br>");
+          var mydatemin = now.getMinutes();
+            console.log(" minute is : " + mydatemin);
+             
+            console.log("program number 3 <br>");
+            //we are using date method for specific date
+            var mydate = now.getDate();
+            console.log( " date is : " + mydate);
+
+             console.log("program number 4 <br>");
+          var mydatemon = now.getMonth();
+            console.log(" month is : " + mydatemon);
+
+             console.log("program number 5 <br>");
+          var mydateyr = now.getFullYear();
+            console.log(" year is : " + mydateyr);
+             
+
+            console.log("created specific date program number 6<br>");
+            var mydateday = new Date('2002-04-16');
+            console.log(" specific date is : " + mydateday);
+            console.log("date according to my date " + mydateday.getDate());
+            console.log(" month show according to my date " + mydateday.getMonth());
+            console.log(" show year according to my date " + mydateday.getFullYear());
+
+            //here we are set date month and year one by one with the help of set method.
+            console.log(" set date program number 7");
+            var dateset = new Date();
+            console.log(" current date is : " + dateset);
+             dateset.setDate(25);
+                console.log(" set date is : " + dateset);
+                console.log("current date only according to my set date: " + dateset.getDate());
+                //here chenge date from current date 
+                dateset.setMonth(3);
+                console.log(" set month is : " + dateset);
+                console.log("current month only according to my set date: " + dateset.getMonth());
+                //here chenge month from current month
+                 
+                dateset.setFullYear(2001);
+                console.log(" set year is : " + dateset);
+                    //here chenge year from current year  
+                console.log("current year only according to my set date: " + dateset.getFullYear());
